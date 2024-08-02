@@ -7,7 +7,7 @@ class LlamaModel implements Model {
     modelName: string;
     llm: OpenAI;
 
-    constructor(modelName: string, baseURL: string, apiKey: string) {
+    constructor(modelName: string, baseURL: string, apiKey: undefined | string) {
         this.modelName = modelName;
         this.llm = new OpenAI({
             baseURL: baseURL,

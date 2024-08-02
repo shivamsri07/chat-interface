@@ -8,8 +8,8 @@ export async function POST(req: Request, res: Response) {
 
   const llm = new LlamaModel(
     "meta-llama/Meta-Llama-3-8B-Instruct",
-    process.env.BASE_URL,
-    process.env.OPENAI_API_KEY
+    "https://api.runpod.ai/v2/vllm-ckm8jlxqtvv7nj/openai/v1",
+    process.env.OPENAI_API_KEY,
   )
 
   const response = await llm.getReply(messages)
